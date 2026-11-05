@@ -1,0 +1,37 @@
+{
+  "name": "elixirdrift-ci",
+  "version": "1.0.0",
+  "description": "Fail CI when your Elixir version claims disagree: .tool-versions (asdf), mix.exs's elixir requirement, every Dockerfile's FROM elixir:X.Y, and every GitHub Actions workflow's elixir-version all checked against each other.",
+  "license": "SEE LICENSE IN LICENSE",
+  "bin": {
+    "elixirdrift-ci": "./cli.js"
+  },
+  "main": "cli.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node test/run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/growaleaf/elixirdrift-ci.git"
+  },
+  "keywords": [
+    "elixir",
+    "version",
+    "asdf",
+    "tool-versions",
+    "mix",
+    "docker",
+    "github-actions",
+    "ci",
+    "continuous-integration",
+    "drift"
+  ],
+  "files": [
+    "cli.js",
+    "README.md",
+    "LICENSE"
+  ]
+}

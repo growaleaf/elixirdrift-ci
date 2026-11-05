@@ -1,0 +1,19 @@
+name: CI
+on: [push]
+jobs:
+  test:
+    strategy:
+      matrix:
+        elixir: ['1.15', '1.16', '1.17']
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          elixir-version:
+            - '1.15'
+            - '1.16'
+            - '1.17'
+      - run: mix deps.get
+      - run: mix test
